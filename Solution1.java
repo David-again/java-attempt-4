@@ -1,5 +1,5 @@
 // class Solution { public int[] solution(int[] A, int K); }
-public class Solution1 {
+class Solution1 {
 
     public int[] solution(int[] A, int K) {
         int [] result = {1,3};
