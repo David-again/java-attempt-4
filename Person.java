@@ -1,3 +1,5 @@
+// OOP example:  A Person Class is used to instantiate girlFriend and onlyBrother objects.
+
 public class Person {
     int age;
     String fName;
