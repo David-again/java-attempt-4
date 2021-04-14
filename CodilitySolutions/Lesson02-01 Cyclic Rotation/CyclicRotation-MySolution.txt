@@ -1,0 +1,28 @@
+    public int[] solution(int[] A, int K){
+        // Algorithm
+        // Initialize any variables
+        // Create B[], array of same size as A
+        // For loop thru indexes of A[]
+        //      int adjustedIndex = oldIndex + K
+        //      if (adjustedIndex >= A.length)
+        //          newIndex = adjustedIndex - A.length
+        //      else
+        //          newIndex = adjustedIndex
+        //      end if
+        //      B[newIndex] = A[oldIndex];
+        // next oldIndex
+        // return B[]
+
+        int[] B = new int[A.length];
+        for (int oldIndex = 0; oldIndex < A.length; oldIndex++) {
+            int newIndex;
+            int adjustedIndex = oldIndex + K;
+            if (adjustedIndex >= A.length) {
+                newIndex = adjustedIndex - A.length;
+            } else {
+                newIndex = adjustedIndex;
+            }
+            B[newIndex] = A[oldIndex];
+        }
+        return B;
+    }

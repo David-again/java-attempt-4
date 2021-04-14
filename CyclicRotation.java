@@ -30,11 +30,14 @@ public class CyclicRotation {
 
     public void outputNums(int[] theNumbers) {
         // outputs the numbers in an integer array.
-        System.out.print("[ ");
-        for (int currentNum : theNumbers){
-            System.out.print(currentNum + ",");
+        System.out.print("[");
+        for (int i = 0; i < theNumbers.length; i++) {
+            if (i > 0) {
+                System.out.print(", ");
+            }
+            System.out.print(theNumbers[i]);
         }
-        System.out.print(" ]");
+        System.out.print("]");
     }
     
     public static void main(String[] args) {
@@ -50,13 +53,14 @@ public class CyclicRotation {
                 int[] ans = testObj.solution(A1, K1);
                 System.out.println();
                 System.out.println("Test #1");
-                System.out.print("Input: ");
+                System.out.print("Input Array:     ");
                 testObj.outputNums(A1);
-                System.out.println();
-                System.out.print("Output: ");
+                System.out.print("  Num Rotations: " + K1);
+                System.out.println(); System.out.println();
+                System.out.print("Function Output: ");
                 testObj.outputNums(ans);
                 System.out.println();
-                System.out.print("Correct answer: ");
+                System.out.print("Correct  answer: ");
                 testObj.outputNums(a1);
                 
                 
