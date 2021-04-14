@@ -6,19 +6,35 @@ public class ArrayPractice {
             System.out.println(currentNum);
         }
     }
+
+    public void printArray(int[] inputArray1) {
+        // This function outputs the elements in an array.
+        System.out.print("[ ");
+        for (int i = 0; i < inputArray1.length; i++) {
+            if (i > 0) {
+                System.out.print(", ");
+            }
+            System.out.print(inputArray1[i]);
+        }
+        System.out.print(" ]");
+    }
     public static void main(String[] args) {
         int[] luckyNums = {4, 7, 25, 17};
-        // luckyNums = {4, 7, 25, 17};
-        int[] another = new int[luckyNums.length];
         
-        luckyNums[2] = 12;
+        //create another array with same length
+        int[] another = new int[luckyNums.length];      
+        
         ArrayPractice arrObj = new ArrayPractice();
-        arrObj.outputNums(luckyNums);
+        arrObj.printArray(luckyNums);       // output original array
         System.out.println();
-        arrObj.outputNums(another);
+        
+        arrObj.printArray(another);     // output new array (auto-initialized with zeroes)
+        
+        // duplicate original array into new array
         another = luckyNums;
+        another[2] = 12;        // change specific array element
         System.out.println();
-        arrObj.outputNums(another);
+        arrObj.printArray(another);     // output new array containing updated version of original array
         
     }
 }
