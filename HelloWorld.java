@@ -13,7 +13,7 @@ public class HelloWorld {
         // Add all integers up to (and including) K
         // Note that input isn't error-checked!
 
-        // Public method; requires an object to be accessed!  Note to self: don't forget!!!
+        // Public (or 'non-static' method); requires an object to be accessed!  Note to self: don't forget!!!
         if (k > 0) {
           return k + addUpTo(k - 1);
         } else {
